@@ -1,0 +1,43 @@
+<main class="dogs-container">
+  <h1 class="page-title">🐶 お店のわんちゃんたち</h1>
+  
+  <div class="dogs-grid">
+    <% @dogs.each do |dog| %>
+      <div class="dog-card">
+        
+        <div class="dog-image">
+          <% if dog.image.attached? %>
+            <%= image_tag dog.image, alt: dog.name %>
+          <% else %>
+            <%= image_tag 'no_image.jpg', alt: '準備中' %>
+          <% end %>
+        </div>
+
+        <div class="dog-info">
+          <div class="dog-header">
+            <h2 class="dog-name"><%= dog.name %></h2>
+            <span class="dog-gender gender-<%= dog.gender %>">
+              <%= dog.gender == 'male' ? '♂ 男の子' : '♀ 女の子' %>
+            </span>
+          </div>
+
+          <table class="dog-profile-table">
+            <tr>
+              <th>犬種</th>
+              <td><%= dog.dog_type %></td>
+            </tr>
+            <tr>
+              <th>年齢</th>
+              <td><%= dog.age %>歳</td>
+            </tr>
+            <tr>
+              <th>性格</th>
+              <td><%= dog.character %></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</main>

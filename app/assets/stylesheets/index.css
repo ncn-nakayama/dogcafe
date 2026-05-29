@@ -1,0 +1,40 @@
+.header-container {
+  display: flex;
+  justify-content: space-between; /* ロゴとメニューを両端に分ける */
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-list {
+  display: flex; /* メニュー項目を横並びにする */
+  list-style: none;
+  gap: 20px; /* 項目間のスキマ */
+}
+
+.reserve-btn {
+  background-color: #d2b48c; /* カフェっぽいベージュ系など */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px; /* 角丸ボタン */
+}
+
+.dogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 画面幅に合わせて自動で並べる */
+  gap: 30px;
+  padding: 20px;
+}
+
+.dog-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+  overflow: hidden; /* 画像の角も丸くする */
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.dog-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 画像の比率を保ったまま枠に収める */
+}
