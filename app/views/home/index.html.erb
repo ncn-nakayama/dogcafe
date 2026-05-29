@@ -1,0 +1,31 @@
+<header class="main-header">
+  <div class="header-container">
+    
+    <div class="header-logo">
+      <%= link_to root_path do %>
+        <span> 犬カフェ</span>
+      <% end %>
+    </div>
+
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <%= link_to '犬紹介', dogs_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'メニュー', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ブログ', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'アクセス', root_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item nav-reservation">
+          <%= link_to 'ご予約', root_path, class: 'nav-link reserve-btn' %>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
